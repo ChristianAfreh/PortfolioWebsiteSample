@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap');
 * {
     box-sizing: border-box;
   }
@@ -31,6 +30,16 @@ header {
   justify-content: space-between;
   margin: 10px 100px;
 
+}
+
+header h3 {
+  font-family: "Pacifico";
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.name-part {
+  color: linear-gradient(180deg, #FF9C1A 0%, #ED250A 100%);
 }
 
 .moon-icon {
@@ -97,6 +106,7 @@ main {
   margin: 2px 100px;
   display: flex;
   gap: 20px;
+  max-width: 100%;
   
 }
 
@@ -110,6 +120,7 @@ main .about-me {
   padding: 20px;
   text-align: center;
   margin: 0 0 30px 0;
+  position: relative;
 }
 
 main .profile-detail {
@@ -120,8 +131,117 @@ main .profile-detail {
   width: 900px;
   height: 700px;
   flex-shrink: 0;
-  padding: 20px;
+  padding: 20px 70px;
 }
+.profile-name {
+  color: #0B0909;
+  font-family: Raleway;
+  font-size: 26.42px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.525px;
+}
+
+
+.fullstack-dev {
+  color: rgba(11, 9, 9, 0.50);
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.socials {
+  display: flex;
+  gap:5px;
+  align-items: center;
+  justify-self: center;
+  margin: 10px 40px;
+}
+
+.socials div {
+  padding: 20.671px 24.806px;
+  gap: 8.269px;
+  border-radius: 8.269px;
+  background: #F2F7FC;
+}
+
+.socials div svg {
+  width: 15.418px;
+  height: 14.845px;
+  fill: #1877F2;
+}
+
+.about-me-section {
+  position: relative;
+    top: -130px;
+    left: 8px;
+}
+.contacts {
+  width: 350px;
+  height: 350px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #F2F5F9;
+}
+
+.about-me-text {
+  color: #0B0909;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px; /* 100% */
+  letter-spacing: 1px;
+}
+.what-I-do {
+  color: #000;
+  font-family: Poppins;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px; /* 125% */
+  letter-spacing: 0.8px;
+}
+.expert-area {
+  display: flex;
+  gap: 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.expert-area .web{
+  width: 333px;
+  height: 169px;
+  background-color: #F2F5F9;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+}
+.expert-area .app{
+  width: 333px;
+  height: 169px;
+  background-color: #F2F5F9;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+}
+.expert-area .ui{
+  width: 333px;
+  height: 169px;
+  background-color: #F2F5F9;
+  padding: 10px;
+  border-radius: 20px;
+}
+.expert-area .mentorship{
+  width: 333px;
+  height: 169px;
+  background-color: #F2F5F9;
+  padding: 10px;
+  border-radius: 20px;
+}
+
 /* header {
   display: grid;
   width: 100%;
