@@ -1,25 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap');
+
 * {
-    box-sizing: border-box;
-  }
-  
-  html {
-    height: 100%;
-  }
-  
-body {
-    font-size: 16px;
-    font-family: 'Raleway','Courier New', Courier, monospace;
-    margin:0;
-    background: #F2F5F9;
+  box-sizing: border-box;
 }
+
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Raleway', 'Courier New', Courier, monospace;
+  margin: 0;
+  background: #F2F5F9;
+}
+
 .content {
   display: grid;
-  grid-template-columns: repeat(12,1fr);
+  grid-template-columns: repeat(12, 1fr);
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
   gap: 10px;
 }
 
@@ -39,7 +40,15 @@ header h3 {
 }
 
 .name-part {
-  color: linear-gradient(180deg, #FF9C1A 0%, #ED250A 100%);
+  background: linear-gradient(180deg, #FF9C1A 0%, #ED250A 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Pacifico;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .moon-icon {
@@ -63,7 +72,7 @@ nav {
   justify-self: end;
 }
 
-nav .nav-card {
+nav .nav-card__list {
   margin: 40px 110px 1px;
   width: 500px;
   height: 100px;
@@ -75,7 +84,7 @@ nav .nav-card {
   gap: 40px;
 }
 
-.nav-card div{
+.nav-card__list div {
   width: 80px;
   height: 80px;
   border-radius: 20px;
@@ -85,19 +94,32 @@ nav .nav-card {
   color: #1A1003;
 }
 
-.nav-card div svg {
+.nav-card__list .nav-card__item.active {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  padding: 10px;
+  background: linear-gradient(127deg, #FF9C1A 0%, #E80505 100%);
+}
+
+.nav-card__list .nav-card__item.active a {
+  color: #fff;
+}
+
+.nav-card__list div svg {
   width: 24px;
   height: 24px;
 
 }
 
-.nav-card div a {
+.nav-card__list div a {
   color: #000;
   font-family: Raleway;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: 20px;
+  text-decoration: none;
 }
 
 
@@ -107,7 +129,7 @@ main {
   display: flex;
   gap: 20px;
   max-width: 100%;
-  
+
 }
 
 main .about-me {
@@ -115,7 +137,7 @@ main .about-me {
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   width: 400px;
-  height: 700px;
+  height: 730px;
   flex-shrink: 0;
   padding: 20px;
   text-align: center;
@@ -129,10 +151,21 @@ main .profile-detail {
   border-radius: 20px;
   max-width: 100%;
   width: 900px;
-  height: 700px;
+  height: 730px;
   flex-shrink: 0;
-  padding: 20px 70px;
+  padding: 0px 70px;
 }
+
+.profile-description {
+  color: #000;
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  /* 187.5% */
+}
+
 .profile-name {
   color: #0B0909;
   font-family: Raleway;
@@ -154,7 +187,7 @@ main .profile-detail {
 
 .socials {
   display: flex;
-  gap:5px;
+  gap: 5px;
   align-items: center;
   justify-self: center;
   margin: 10px 40px;
@@ -175,9 +208,10 @@ main .profile-detail {
 
 .about-me-section {
   position: relative;
-    top: -130px;
-    left: 8px;
+  top: -130px;
+  left: 8px;
 }
+
 .contacts {
   width: 350px;
   height: 350px;
@@ -186,32 +220,82 @@ main .profile-detail {
   background: #F2F5F9;
 }
 
+.about-me-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 32px;
+}
+
 .about-me-text {
   color: #0B0909;
   font-family: Poppins;
   font-size: 40px;
   font-style: normal;
   font-weight: 500;
-  line-height: 40px; /* 100% */
+  line-height: 40px;
+  /* 100% */
   letter-spacing: 1px;
 }
+
 .what-I-do {
   color: #000;
   font-family: Poppins;
   font-size: 32px;
   font-style: normal;
   font-weight: 500;
-  line-height: 40px; /* 125% */
+  line-height: 40px;
   letter-spacing: 0.8px;
 }
+
 .expert-area {
-  display: flex;
-  gap: 30px;
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
   align-items: center;
   justify-content: center;
 }
-.expert-area .web{
+
+.expert-area__box {
+  background: #F2F5F9;
+  width: 100%;
+  height: 169px;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 20px;
+}
+
+.expert-area__box.web, .expert-area__box.mentorship {
+  background: #FFEBD1;
+}
+
+.expert-area__box--header svg {
+  vertical-align: middle;
+}
+
+.expert-area__box--header .title {
+  vertical-align: middle;
+  color: #000;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+ 
+.expert-area__desc {
+  color: #000;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.35px;
+} 
+
+/* 
+.expert-area .app {
   width: 333px;
   height: 169px;
   background-color: #F2F5F9;
@@ -219,28 +303,22 @@ main .profile-detail {
   margin-bottom: 30px;
   border-radius: 20px;
 }
-.expert-area .app{
-  width: 333px;
-  height: 169px;
-  background-color: #F2F5F9;
-  padding: 10px;
-  margin-bottom: 30px;
-  border-radius: 20px;
-}
-.expert-area .ui{
+
+.expert-area .ui {
   width: 333px;
   height: 169px;
   background-color: #F2F5F9;
   padding: 10px;
   border-radius: 20px;
 }
-.expert-area .mentorship{
+
+.expert-area .mentorship {
   width: 333px;
   height: 169px;
   background-color: #F2F5F9;
   padding: 10px;
   border-radius: 20px;
-}
+} */
 
 /* header {
   display: grid;
@@ -330,4 +408,3 @@ main {
   border-radius: 10px;
   background: #fff;
 } */
-
