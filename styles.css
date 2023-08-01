@@ -231,7 +231,7 @@ main .profile-detail {
 
 .contacts .bottom-line {
   width: 256px;
-  border-top:1px solid #E3E3E3;
+  border-top: 1px solid #E3E3E3;
 }
 
 .contacts .contact .contact-detail {
@@ -244,22 +244,22 @@ main .profile-detail {
   padding: 5px 0px;
 }
 
- .contact-detail__label {
+.contact-detail__label {
   color: rgba(26, 16, 3, 0.50);
-font-family: Raleway;
-font-size: 14px;
-font-style: normal;
-font-weight: 600;
-line-height: 16px;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
 }
 
 .contact-detail__value {
   color: #000;
-font-family: Raleway;
-font-size: 14px;
-font-style: normal;
-font-weight: 600;
-line-height: 20px;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
 }
 
 
@@ -292,7 +292,7 @@ line-height: 20px;
 
 .expert-area {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   align-items: center;
   justify-content: center;
@@ -309,7 +309,8 @@ line-height: 20px;
   border-radius: 20px;
 }
 
-.expert-area__box.web, .expert-area__box.mentorship {
+.expert-area__box.web,
+.expert-area__box.mentorship {
   background: #FFEBD1;
 }
 
@@ -326,7 +327,7 @@ line-height: 20px;
   font-weight: 600;
   line-height: 20px;
 }
- 
+
 .expert-area__desc {
   color: #000;
   font-family: Raleway;
@@ -335,7 +336,7 @@ line-height: 20px;
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0.35px;
-} 
+}
 
 /* 
 .expert-area .app {
