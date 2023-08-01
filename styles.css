@@ -215,7 +215,7 @@ main .profile-detail {
 .contacts {
   width: 350px;
   height: 380px;
-  text-align: left;
+  text-align: center;
   flex-shrink: 0;
   border-radius: 20px;
   background: #F2F5F9;
@@ -225,8 +225,9 @@ main .profile-detail {
 .contacts .contact {
   display: flex;
   gap: 20px;
+  text-align: left;
   align-items: center;
-  padding: 12px 0px 12px 60px;
+  padding: 12px 0px 12px 55px;
 }
 
 .contacts .bottom-line {
@@ -262,6 +263,26 @@ main .profile-detail {
   line-height: 20px;
 }
 
+.download-button {
+  display: inline-flex;
+  padding: 10px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 20px;
+  margin-top: 6px;
+  background: linear-gradient(127deg, #FF9C1A 0%, #E80505 100%);
+}
+
+.download-button .download-text {
+  color: #F2F7FC;
+  font-family: Raleway;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 166.667% */
+}
 
 .about-me-box {
   display: inline-flex;
